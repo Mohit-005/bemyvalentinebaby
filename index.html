@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valentine Hand Heart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    <div class="cupid-arrows" id="cupidArrows"></div>
+    <div class="sparkles" id="sparkles"></div>
+    <div class="confetti-container" id="confettiContainer"></div>
+    <div class="cute-message" id="cuteMessage"></div>
+    
+    <main id="app">
+      <section id="cameraView" class="camera-view">
+        <div class="camera-frame">
+          <video id="webcam" autoplay playsinline></video>
+          <canvas id="debugCanvas" class="debug-canvas" width="640" height="480"></canvas>
+          <div class="prompt">
+            <div class="prompt-title">Will you be my Valentine?</div>
+            <div class="prompt-subtitle">
+              Make a hand heart to accept
+              <span class="icon">❤</span>
+            </div>
+          </div>
+          <div class="progress">
+            <div id="progressText" class="progress-text">HOLDING 0%</div>
+            <div class="progress-track">
+              <div id="progressFill" class="progress-fill"></div>
+            </div>
+          </div>
+          <div id="statusText" class="status-text">Allow camera to begin.</div>
+        </div>
+      </section>
+
+      <section id="galleryView" class="gallery-view">
+        <div class="gallery-header">
+          <div class="gallery-heart">❤</div>
+          <button id="closeButton" class="close-button" type="button" aria-label="Close">×</button>
+        </div>
+        <h1>Happy Valentine&#39;s Day!</h1>
+        <div class="gallery-grid">
+          <div class="card">
+            <img class="card-image" src="assets/1.jpg" alt="Valentine 1" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/2.jpg" alt="Valentine 2" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/3.jpg" alt="Valentine 3" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/4.jpg" alt="Valentine 4" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/5.jpg" alt="Valentine 5" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/6.jpg" alt="Valentine 6" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/7.jpg" alt="Valentine 7" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/8.jpg" alt="Valentine 8" />
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/9.jpg" alt="Valentine 9" />
+          </div>
+        </div>
+        <p class="gallery-footer-message">
+          girrrlll...! i know this guy's kinda dumb but he really loves you, give him a chance. Just trust me on this. Celebrate this valentine with him. Now go on... TEXT HIM!!!
+        </p>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.0/wasm/vision_wasm_internal.js"></script>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
+
